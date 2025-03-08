@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Notes - Veggy Farm
+{% endblock %}
+{% block headjs %}
+{% endblock %}
+{% block site_content %}
+   <div class="site__content-brief">
+      <div class="separator"></div> 
+   <div class="block-notes">
+      {% for post in posts %}
+         <div class="block-note">
+            <div><b>{{ post.title }}</b></div>
+            <div>{{ post.content }}</div>
+         </div>
+      {% endfor %}
+   </div>
+   <input class="posts-btn" type="submit" name="post" value="make post">
+   <input class="posts-btn" type="submit" name="more" value="load more">
+   <div class="block-create-note">
+      <h2>Create a Note</h2>
+      <form method="post" enctype="multipart/form-data">
+           {{ form.as_p }}
+           {% csrf_token %}
+           <button class="posts-btn" type="submit" >Submit</button>
+      </form>
+   </div>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         var postscount = 2;
+
+         $(document).on("click", "input[name='post']", function(){
+            $(".block-create-note").show();
+            $(this).hide();
+         })
+         
+         $(document).on("click", "input[name='more']", function(){
+            $.get("/notes/more/" + postscount, function(data){
+               $(".block-notes").append(data)
+               postscount += 2;
+            })
+         })
+      })
+   </script>
+{% endblock %}

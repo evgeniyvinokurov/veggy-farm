@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Veggy Farm{% endblock %}</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/owl.theme.default.css' %}">
+	<script type="text/javascript" src="{% static 'all.js' %}"></script>
+	{% block headjs %}	
+	{% endblock %}
+</head>
+<body>
+	<div class="site">
+		<div class="site__header">
+			{% block slider %}
+			<div class="main-logo">
+				<img src="{% static 'imgs/header_logo.png' %}" width="650px">
+			</div>
+			<div class="slider">  
+				<div class="slider-container owl-carousel owl-theme">
+					{% for slide in slides %}
+					<div class="slider-container__item">
+			      		<img src="/{{ slide.upload }}" width="550px" />
+			      	</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% endblock %}
+			<div class="header-menu">
+				<div class="header-menu__list">
+					{% for menuitem in menuitems %}
+					<a href="{{ menuitem.url }}" class="header-menu__item header-menu__item">
+						{{ menuitem.text }}
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="site__content">
+			{% block site_content %}
+			{% endblock %}
+
+			<div class="social">
+
+			    <a class="social-button  social-button--share" href="#" target="_blank">
+			        <img src="{% static 'imgs/share.png' %}" alt="Share" />
+			    </a>
+
+			    <a class="social-button  social-button--rss" href="#" target="_blank">
+			        <img src="{% static 'imgs/rss.png' %}" alt="Rss" />
+			    </a>
+			</div>
+
+			<div class="separator"></div>
+		</div>
+		<div class="site__footer js-footer">
+			<div class="site__footer-container">
+				<div class="under-menu">
+					<div class="under-menu__list">
+						<div class="under-menu__item">
+							Terms And Privacy
+						</div>
+						<div class="under-menu__item">
+							Sponsors
+						</div>
+					</div>
+				</div>
+				<div class="coordinates">
+					<div class="under-menu-second">
+						<div class="under-menu__list">
+							<div class="under-menu__item">
+								Food
+							</div>
+							<div class="under-menu__item">
+								Stages
+							</div>
+							<div class="under-menu__item">
+								People
+							</div>
+						</div>
+					</div>
+					<div class="under-logo"><img src="{% static 'imgs/footer_logo.png' %}"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

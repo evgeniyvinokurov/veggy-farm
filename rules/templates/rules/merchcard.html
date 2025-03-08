@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+{{ merch.name }} - Merch - Veggy Farm
+{% endblock %}
+{% block headjs %}
+	<link rel="stylesheet" type="text/css" href="{% static '/css/merch/style.css' %}">
+{% endblock %}
+{% block site_content %}
+	<div style="margin-top: 40px;">
+	    <h3>{{ merch.name }} - Merch - Shop</h3>
+		<div name="#merch" class="detailed-photo">
+			<img src="/{{ merch.pic1 }}"/>
+		</div>
+		<div class="merch-block-1">
+			<div class="detailed-price">
+				${{ merch.price }}
+			</div>
+			<div class="detailed-weight">
+				{{ merch.weight }}g
+			</div>
+		</div>
+		<div class="merch-block-2">
+			<a href = "mailto:merch@wanttoeat.com?subject=Buy&nbsp;{{merch.name}}&body=---------------please&nbsp;do&nbsp;not&nbsp;remove&nbsp;this---------------%0D%0A%0D%0A&nbsp;Title:{{merch.name}},&nbsp;Id:{{merch.id}}&nbsp;%0D%0A%0D%0A--------------please&nbsp;do&nbsp;not&nbsp;remove&nbsp;this----------------%0D%0A%0D%0AYour comment here please:&nbsp;" class="detailed-buy-btn">
+				Buy
+			</a>
+		</div>
+		<div class="merch-block-3">		
+			<div class="detailed-text">
+				{{ merch.text }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

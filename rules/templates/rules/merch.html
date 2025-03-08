@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Merch - Veggy Farm
+{% endblock %}
+{% block headjs %}
+	<link rel="stylesheet" type="text/css" href="{% static '/css/merch/style.css' %}">
+{% endblock %}
+{% block site_content %}
+	{{ merchs|json_script:"merchs" }}
+	<div id="app" class="app">
+		<div class="catalog">
+			<catalog></catalog>
+		</div>
+	</div>
+	<script src="{% static 'shop-all.js' %}"></script>
+{% endblock %}

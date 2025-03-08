@@ -1,0 +1,168 @@
+body {
+  font-family: 'Yrsa Light'; }
+
+h2, h3 {
+  margin-left: 30px;
+  margin-bottom: -10px; }
+
+.site {
+  overflow: hidden; }
+  .site .site_block, .site .site__header, .site .site__content, .site .site__footer {
+    display: block;
+    width: 770px;
+    margin: 0 auto; }
+  .site .info_field {
+    display: inline-block;
+    vertical-align: middle; }
+    .site .info_field img {
+      width: 40px; }
+  .site .info_field--small {
+    display: inline-block;
+    vertical-align: middle; }
+    .site .info_field--small img {
+      width: 20px; }
+  .site__header .slider {
+    position: relative;
+    height: 335px;
+    width: 650px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    overflow: hidden; }
+    .site__header .slider-container {
+      width: 550px;
+      margin: 0 auto; }
+    .site__header .slider img {
+      display: inline-block;
+      z-index: 0; }
+  .site__header .header-menu__list {
+    display: block;
+    background-color: #254267;
+    padding: 12px; }
+  .site__header .header-menu__item {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    width: 140px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 25px; }
+  .site__header .main-logo {
+    margin: 20px 20px 0 20px; }
+  .site__content-brief {
+    font-size: 15px;
+    line-height: 22px; }
+    .site__content-brief .separator {
+      width: 770px;
+      background: #c3d2db;
+      height: 30px;
+      margin-top: 10px;
+      margin-bottom: 5px; }
+    .site__content-brief .main-slider {
+      background: #e3eaee;
+      position: relative;
+      overflow: hidden; }
+      .site__content-brief .main-slider__controls {
+        top: 0px;
+        position: absolute;
+        width: 800px;
+        height: 200px;
+        display: block; }
+        .site__content-brief .main-slider__controls-left {
+          position: relative;
+          left: 10px;
+          top: 50px;
+          cursor: pointer;
+          width: 20px;
+          display: inline-block;
+          float: left;
+          z-index: 2; }
+          .site__content-brief .main-slider__controls-left img {
+            height: 70px; }
+        .site__content-brief .main-slider__controls-right {
+          position: relative;
+          right: 30px;
+          cursor: pointer;
+          top: 50px;
+          width: 20px;
+          display: inline-block;
+          float: right;
+          z-index: 2; }
+          .site__content-brief .main-slider__controls-right img {
+            height: 70px; }
+      .site__content-brief .main-slider__list {
+        display: block;
+        margin: 0 auto;
+        height: 172px;
+        width: 2000px;
+        position: relative;
+        padding: 5px 5px 0 5px; }
+        .site__content-brief .main-slider__list-item {
+          display: inline-block;
+          margin: -2.5px; }
+          .site__content-brief .main-slider__list-item img {
+            width: 260px;
+            height: 170px; }
+  .site__content .social {
+    padding-left: 20px; }
+    .site__content .social-button {
+      text-decoration: none;
+      margin-left: -3px; }
+      .site__content .social-button img {
+        width: 30px; }
+    .site__content .social-button--share {
+      margin-left: -5px; }
+  .site__content .separator {
+    width: 770px;
+    background: #c3d2db;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .site__footer {
+    background-color: #254267; }
+    .site__footer-container .under-menu, .site__footer-container .under-menu-second {
+      display: inline-block;
+      vertical-align: top; }
+      .site__footer-container .under-menu__list, .site__footer-container .under-menu-second__list {
+        display: block;
+        padding: 20px; }
+      .site__footer-container .under-menu__item, .site__footer-container .under-menu-second__item {
+        display: block;
+        color: white;
+        width: 140px;
+        font-size: 15px;
+        cursor: pointer; }
+    .site__footer-container .under-logo {
+      display: inline-block;
+      padding: 20px;
+      float: right; }
+      .site__footer-container .under-logo img {
+        height: 50px; }
+
+.swiper-wrapper {
+  width: 2000px; }
+
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.block-create-note {
+  margin: 50px;
+  display: none; }
+
+.block-note {
+  padding: 20px;
+  margin: 30px;
+  border: 5px solid #254267;
+  border-radius: 20px;
+  font-size: 17px; }
+
+.posts-btn {
+  margin: 10px 0px 30px 30px;
+  background-color: #254267;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+  border: none; }

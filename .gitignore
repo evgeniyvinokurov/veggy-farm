@@ -1,0 +1,6 @@
+node_modules/*
+package-lock.json
+env/*
+rules/__pycache__/*
+mysite/__pycache__/*
+rules/db/__pycache__/*
