@@ -7,3 +7,6 @@
 Пользователь админ (поменять пароль при установке) - joe  
 Проект может работать с докер: `docker compose up` and visit http://127.0.0.1:8000/  
 
+<p align="left">
+ <img width="70%"  src="veggy-farm.jpg" alt="veggy-farm"/>
+</p>
